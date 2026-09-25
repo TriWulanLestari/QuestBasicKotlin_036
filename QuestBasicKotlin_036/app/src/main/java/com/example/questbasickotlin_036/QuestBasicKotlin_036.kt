@@ -4,15 +4,30 @@ package com.example.questbasickotlin_036
 //    println("Hello, world!")
 //}
 
+//fun main() {
+//
+//    val nama = "Budi"
+//    var umur = 20
+//
+//    println(nama)
+//    println(umur)
+//
+//    umur = 21
+//
+//    println(umur)
+//}
+
 fun main() {
+    // Read only list
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println(readOnlyShapes)
+    // [triangle, square, circle]
 
-    val nama = "Budi"
-    var umur = 20
+    // Mutable list with explicit type declaration
+    val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
+    println(shapes)
+    // [triangle, square, circle]
 
-    println(nama)
-    println(umur)
-
-    umur = 21
-
-    println(umur)
+    // Read-Only view dari mutable list
+    val shapesLocked: List<String> = shapes
 }
