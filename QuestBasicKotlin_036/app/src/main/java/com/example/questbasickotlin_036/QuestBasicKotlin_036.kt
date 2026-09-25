@@ -55,18 +55,34 @@ package com.example.questbasickotlin_036
 //    println(readOnlyJuiceMenu.count())
 //}
 
-fun main() {
-    // If expression
-    val check = true
-    val d = if (check) 1 else 2
-    println(d)
+//fun main() {
+//    // If expression
+//    val check = true
+//    val d = if (check) 1 else 2
+//    println(d)
+//
+//    // When expression
+//    val obj = "Hello"
+//    val result = when (obj) {
+//        "1" -> "One"
+//        "Hello" -> "Greeting"
+//        else -> "Unknown"
+//    }
+//    println(result)
+//}
 
-    // When expression
-    val obj = "Hello"
-    val result = when (obj) {
-        "1" -> "One"
-        "Hello" -> "Greeting"
-        else -> "Unknown"
+fun main() {
+    // Range & For Loop
+    for (number in 1..5) {
+        print(number)
     }
-    println(result)
+    println()
+
+    // While Loop
+    var count = 3
+    while (count > 0) {
+        println("Count down: $count")
+        count--
+    }
 }
+
