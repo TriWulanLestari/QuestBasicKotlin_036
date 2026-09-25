@@ -71,18 +71,36 @@ package com.example.questbasickotlin_036
 //    println(result)
 //}
 
-fun main() {
-    // Range & For Loop
-    for (number in 1..5) {
-        print(number)
-    }
-    println()
+//fun main() {
+//    // Range & For Loop
+//    for (number in 1..5) {
+//        print(number)
+//    }
+//    println()
+//
+//    // While Loop
+//    var count = 3
+//    while (count > 0) {
+//        println("Count down: $count")
+//        count--
+//    }
+//}
 
-    // While Loop
-    var count = 3
-    while (count > 0) {
-        println("Count down: $count")
-        count--
-    }
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+fun printMessageWithPrefix(message: String, prefix: String = "Info") {
+    println("[$prefix] $message")
+}
+
+fun main() {
+    println(sum(1, 2))
+    printMessageWithPrefix("Hello", "Log")
+    printMessageWithPrefix("Hello")
+
+    // Lambda expression
+    val upper = { string: String -> string.uppercase() }
+    println(upper("hello"))
 }
 
