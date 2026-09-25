@@ -104,20 +104,36 @@ package com.example.questbasickotlin_036
 //    println(upper("hello"))
 //}
 
-class Contact(val id: Int, var email: String) {
-    fun printId() {
-        println(id)
+//class Contact(val id: Int, var email: String) {
+//    fun printId() {
+//        println(id)
+//    }
+//}
+//
+//data class User(val name: String, val id: Int)
+//
+//fun main() {
+//    val contact = Contact(1, "mary@gmail.com")
+//    contact.printId()
+//
+//    val user = User("Alex", 1)
+//    val secondUser = user.copy(id = 2)
+//    println(user == secondUser)
+//}
+
+fun describeString(maybeString: String?): String {
+    return if (maybeString != null && maybeString.length > 0) {
+        "String of length ${maybeString.length}"
+    } else {
+        "Empty or null string"
     }
 }
 
-data class User(val name: String, val id: Int)
-
 fun main() {
-    val contact = Contact(1, "mary@gmail.com")
-    contact.printId()
+    var nullable: String? = "You can keep a null here"
+    nullable = null
 
-    val user = User("Alex", 1)
-    val secondUser = user.copy(id = 2)
-    println(user == secondUser)
+    val nullString: String? = null
+    println(nullString?.length) // Safe call
+    println(nullString?.length ?: 0) // Elvis operator
 }
-
