@@ -86,21 +86,38 @@ package com.example.questbasickotlin_036
 //    }
 //}
 
-fun sum(x: Int, y: Int): Int {
-    return x + y
+//fun sum(x: Int, y: Int): Int {
+//    return x + y
+//}
+//
+//fun printMessageWithPrefix(message: String, prefix: String = "Info") {
+//    println("[$prefix] $message")
+//}
+//
+//fun main() {
+//    println(sum(1, 2))
+//    printMessageWithPrefix("Hello", "Log")
+//    printMessageWithPrefix("Hello")
+//
+//    // Lambda expression
+//    val upper = { string: String -> string.uppercase() }
+//    println(upper("hello"))
+//}
+
+class Contact(val id: Int, var email: String) {
+    fun printId() {
+        println(id)
+    }
 }
 
-fun printMessageWithPrefix(message: String, prefix: String = "Info") {
-    println("[$prefix] $message")
-}
+data class User(val name: String, val id: Int)
 
 fun main() {
-    println(sum(1, 2))
-    printMessageWithPrefix("Hello", "Log")
-    printMessageWithPrefix("Hello")
+    val contact = Contact(1, "mary@gmail.com")
+    contact.printId()
 
-    // Lambda expression
-    val upper = { string: String -> string.uppercase() }
-    println(upper("hello"))
+    val user = User("Alex", 1)
+    val secondUser = user.copy(id = 2)
+    println(user == secondUser)
 }
 
